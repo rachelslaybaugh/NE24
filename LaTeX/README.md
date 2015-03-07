@@ -54,16 +54,16 @@ help, though.
 
 ## How do I write LaTeX?
 
-[The Not So Short Introduction to LaTeX2e][http://tobi.oetiker.ch/lshort/lshort.pdf]
+[The Not So Short Introduction to LaTeX2e](http://tobi.oetiker.ch/lshort/lshort.pdf)
 
 ### LyX
 
-[LyX][http://www.lyx.org/]  is a WYSIWYG editor for LaTeX. That's 
+[LyX](http://www.lyx.org/)  is a WYSIWYG editor for LaTeX. That's 
 awesome. I recommend you give it a shot.
 
 ### TeXShop
 
-[TeXShop][http://pages.uoregon.edu/koch/texshop/] or [TexMaker][http://www.xm1math.net/texmaker/] or some others are
+[TeXShop](http://pages.uoregon.edu/koch/texshop/) or [TexMaker](http://www.xm1math.net/texmaker/) or some others are
 tools that many folks, including myself, use to write and render latex side by 
 side. 
 It's cool. It has tabcompletion, syntax highlighting, and some other useful features.
@@ -72,7 +72,7 @@ It's cool. It has tabcompletion, syntax highlighting, and some other useful feat
 
 Some folks will find the text editor option the most extensible and glorious. Katy Huff is
  one of those folks. She has a vim plugin for latex called, you guessed it, 
-[vim-latex][http://vim-latex.sourceforge.net/] and it does most of the typing for her.
+[vim-latex](http://vim-latex.sourceforge.net/) and it does most of the typing for her.
  With syntax highlighting, it tells her where there's a mistake and, by virtue of dealing 
 directly with the content, she can ignore how it looks until the very end. It is functionally
 like TeXShop, etc. but without seeing what's happeneing as you go.
