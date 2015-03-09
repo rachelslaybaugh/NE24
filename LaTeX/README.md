@@ -49,8 +49,7 @@ the website.
 
 ### Windows
 
-I honestly have no idea. It [looks like][texSE] the TeX stack exchange may be able to 
-help, though. 
+Installation is pretty straightforward using [ProTeXt](https://www.tug.org/protext/). ProTeXt will also give you a text editor (TeXStudio). Read the section underneath download and install, and once you have the distribution, it would be in your best interest to read the README before running setup.exe.
 
 ## How do I write LaTeX?
 
