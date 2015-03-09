@@ -56,6 +56,12 @@ help, though.
 
 [The Not So Short Introduction to LaTeX2e](http://tobi.oetiker.ch/lshort/lshort.pdf)
 
+### TeXmacs
+
+[TeXmacs](http://www.texmacs.org/tmweb/home/welcome.en.html)  is a WYSIWYG editor fo LaTeX. It has plugins for 
+many languages that allows it to be used as a notebook. Convenient autocomplete, but slightly different macros.
+Like all \*macs it can be scripted in a lisp (TeXmacs scheme). It also has many european users.
+
 ### LyX
 
 [LyX](http://www.lyx.org/)  is a WYSIWYG editor for LaTeX. That's 
