@@ -2,12 +2,13 @@
 
 The final project for this course consist of several items:
 
-*  an [abstract](#meeting-20150330) with a propsal for your project, due March 30, 2015;
-*  the [project](#meeting-20150501) itself, due May 1, 2015; and
-*  a [presentation](#meeting-20140427) about the project, given in class on April 27, 2015.
+*  an [abstract](#abstract) with a propsal for your project, due March 30, 2015;
+*  the [project](#project) itself, due May 1, 2015; and
+*  a [presentation](#presentation) about the project, given in class on April 27, 2015.
 
 -----------
-### Project: 2015/05/01 
+### Project
+Due 2015/05/01 
 
 The final project for this class is to submit a pull request to an open source coding project.
 The project can be in any language that you want, but it should be hosted on GitHub or BitBucket. 
@@ -32,7 +33,8 @@ Places to look for projects:
 * If you find another useful list, add it here and submit a pull request to this project page :).
 
 -----------
-### Abstract: 2015/03/30
+### Abstract
+Due 2015/03/30
 
 Submit an abstract on bCourses that is one page or less discussing what you will do for your project. This should include:
 
@@ -45,7 +47,8 @@ Include specifically the objective you are trying to accomplish and why that wil
 6. If you are working with a partner or in a group, specify how the work will be divided and who will do what.
 
 -----------
-### Presentation: 2015/04/27
+### Presentation
+Due 2015/04/27
 
 We will do in-class presentations on the last day of class. 
 The presentation length will depend upon how many groups we get, but for now plan on five minutes. 
