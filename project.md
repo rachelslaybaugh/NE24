@@ -11,7 +11,9 @@ The final project for this course consist of several items:
 Due 2015/05/01 
 
 The final project for this class is to submit a pull request to an open source coding project.
-The project can be in any language that you want, but it should be hosted on GitHub or BitBucket. 
+The project should be in some way related to computational science.
+The project can be in any language that you want.
+It can be hosted on GitHub or BitBucket (which is easy), or anywhere that you can contribute and provide documentation about your contribution. 
 The pull request needs to tangibly contribute to the project in some way. 
 This can be any of:
 
@@ -32,11 +34,15 @@ Places to look for projects:
 * PyNE, Python for Nuclear Engineering: [GitHub page](https://github.com/pyne/pyne) and [website](http://pyne.io/)
 * If you find another useful list, add it here and submit a pull request to this project page :).
 
+Note that most codes will have a list of Issues or Tickets that detail code needs.
+Many of these are labeled as "novice" or "low-hanging fruit", etc.
+You can also often contact someone from the development team to see if they have suggestions for good ways to get involved.
+
 -----------
 ### Abstract
 Due 2015/03/30
 
-Submit an abstract on bCourses that is one page or less discussing what you will do for your project. This should include:
+Submit an abstract on bCourses that is one page or less (unless you are in a group, in which case it can be longer) discussing what you will do for your project. This should include:
 
 1. The project to which you would like to contribute.
 2. An outline of what you intend to do. 
