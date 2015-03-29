@@ -12,3 +12,7 @@ intro/ne24intro
 *.nav
 *.out
 *.vrb
+documentation/html
+documentation/latex
+plantes*
+*.pyc
