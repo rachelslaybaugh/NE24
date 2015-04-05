@@ -1,0 +1,1 @@
+Files are storage units for retaining information, which are available for computer programs.
