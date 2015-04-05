@@ -48,11 +48,12 @@ class NumJellyEstimator:
  
         # THW: Add a test for value here
 
-        # Store the fraction.
+        # Store the fraction. Create a variable to do this.
         self.worldPop = people
 
 
     ## Set the fraction of people who love the color pink.
+    #  \param frac fraction of people who love the color pink (float between 0 and 1)
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
