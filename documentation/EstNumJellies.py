@@ -53,6 +53,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac fraction of people who love pink (float between 0 and 1)
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
@@ -84,7 +85,8 @@ class NumJellyEstimator:
 
     ## Estimate the number of jelly beans in the world using the new pink data.
     def compute_Njelly_pink_est(self):
-
+        # THW: Check if fracPplLovingPink is 1.0, to avoid zeroDivisionError.
+        
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
             (1.0 - self.fracPplLovingPink)
         # If this value is zero, it means that some value didn't get set.
