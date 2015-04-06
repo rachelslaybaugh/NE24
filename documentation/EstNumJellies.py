@@ -12,18 +12,18 @@ class NumJellyEstimator:
     ## Instantiating the class initializes some variables.
     def __init__(self):
 
-        ## Fraction of land used for growing sugar
+        ## @val self.fracLand4Sugar Fraction of land used for growing sugar
         self.fracLand4Sugar = 0.0
-        ## World population
+        ## @val self.worldPop World population
         self.worldPop = 0
-        ## Scaling constant used in estimate
+        ## @val self.scalingConst Scaling constant used in estimate
         self.scalingConst = 1e-1
-        ## Fraction of people who love the color pink.
+        ## @val self.fracPplLovingPink Fraction of people who love the color pink.
         self.fracPplLovingPink = 0.0
 
 
     ## Set the fraction of land used for sugar.
-    # \param frac fraction of land used for sugar (float between 0 and 1)
+    # @param frac fraction of land used for sugar (float between 0 and 1)
     def set_land_frac_for_sugar(self, frac):
 
         # Make sure we've got a float.
