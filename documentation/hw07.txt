@@ -1,0 +1,6 @@
+Madeline Wu
+HW #7: Documentation
+
+http://docs.sympy.org/latest/guide.html#
+
+Sympy is the github project that I am working on for the final project. I looked through the documentation and user guide and found it to have very clear information.  However, it did not have the best navigation.  The topics and subtopics were presented in an outline format, which required a lot of scrolling up and down.  It was difficult to connect most of the topics together to see how they related and how they overlapped.  I am unsure what they used to to generate the documentation.  It seems like a lot of self-documentation, combined with auto-documentation.  
