@@ -5,7 +5,6 @@ intro/ne24intro
 *.aux
 *.bak
 *.log
-*.pdf
 *.synctex.gz
 *.snm
 *.toc
