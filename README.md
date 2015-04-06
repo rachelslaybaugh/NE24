@@ -1,6 +1,6 @@
 # ASSIGNMENT #7 - Documentation
 ### by Regina Ongowarsito
-*--March-- April 5, 2015*
+*~~March~~ April 5, 2015*
 
 ### Table of Contents
 * Documentation
