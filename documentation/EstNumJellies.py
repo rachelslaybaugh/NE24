@@ -12,13 +12,13 @@ class NumJellyEstimator:
     ## Instantiating the class initializes some variables.
     def __init__(self):
 
-        ## Fraction of land used for growing sugar
+        ## Fraction/ratio of land used for growing sugar / total land in the world
         self.fracLand4Sugar = 0.0
         ## World population
         self.worldPop = 0
         ## Scaling constant used in estimate
         self.scalingConst = 1e-1
-        ## Fraction of people who love the color pink.
+        ## Fraction/ratio of people who love the color pink / total population
         self.fracPplLovingPink = 0.0
 
 
@@ -53,6 +53,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac fraction/ratio of people who love the color pink to total number of people on earth
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
