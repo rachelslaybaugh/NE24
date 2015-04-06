@@ -16,7 +16,7 @@ class NumJellyEstimator:
         self.fracLand4Sugar = 0.0
         ## World population
         self.worldPop = 0
-        ## Scaling constant used in estimate
+        ## Scaling constant used in estimate. Since constant can not be changed, we could make it a class variable insted of an instance variable.
         self.scalingConst = 1e-1
         ## Fraction of people who love the color pink.
         self.fracPplLovingPink = 0.0
@@ -30,7 +30,7 @@ class NumJellyEstimator:
         assert type(frac) is float, \
             "Error: fraction of land set must be a float."
 
-        # Check that the value is between zero and one.
+        # Check that the value is between zero and one, exit program if not.
         if ((frac <= 0.0) or (frac >= 1.0)):
             print "\nError: Fraction of land used for sugar must be between"\
                   +" 0.0 and 1.0.\n"
@@ -46,7 +46,7 @@ class NumJellyEstimator:
 
         # THW: Add a test for type here
  
-        # THW: Add a test for value here
+        # THW: Add a test for value here. Make sure people > 0
 
         # Store the fraction.
         self.worldPop = people
