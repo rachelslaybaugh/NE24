@@ -7,6 +7,7 @@ import sys
 # The number of jelly beans in the world is correlated to the fraction
 # of land used for sugar, the world population, and the fraction of 
 # people who like the color pink.
+
 class NumJellyEstimator:
 
     ## Instantiating the class initializes some variables.
@@ -23,7 +24,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of land used for sugar.
-    # \param frac fraction of land used for sugar (float between 0 and 1)
+    # \param frac fraction of land used for sugar (float between 0 and 1) Must be between 0 and 1 because percentage. 
     def set_land_frac_for_sugar(self, frac):
 
         # Make sure we've got a float.
@@ -40,8 +41,8 @@ class NumJellyEstimator:
         self.fracLand4Sugar = frac
 
 
-    ## Set the world population
-    # \param people integer number of people on earth
+    ## Set the world population. 
+    # \param people integer number of people on earth (int between 0 and 10,000,000,000)
     def set_world_pop(self, people):
 
         # THW: Add a test for type here
@@ -72,6 +73,7 @@ class NumJellyEstimator:
     ## Estimate the number of jelly beans in the world.
     # This is based on a previous understanding of the estimate that did not
     # take the color pink into account. Still supported for legacy reasons.
+    # Number of jelly beans in the world can be found with the total population and a calculated fraction, given all variables. 
     def compute_Njelly_est(self):
 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst
@@ -84,7 +86,7 @@ class NumJellyEstimator:
 
     ## Estimate the number of jelly beans in the world using the new pink data.
     def compute_Njelly_pink_est(self):
-
+        # We multiplay the world population by a fraction and a scale. 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
             (1.0 - self.fracPplLovingPink)
         # If this value is zero, it means that some value didn't get set.
@@ -94,6 +96,7 @@ class NumJellyEstimator:
                   +"computing estimate.\n"
 
         # THW: What other checks might be useful? What is a better way to do this?
+        # The result should be rounded to an integer. 
 
         return int(n)
 
