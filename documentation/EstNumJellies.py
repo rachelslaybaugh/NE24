@@ -7,6 +7,7 @@ import sys
 # The number of jelly beans in the world is correlated to the fraction
 # of land used for sugar, the world population, and the fraction of 
 # people who like the color pink.
+# The fraction estimator computes with perfect accuracy.
 class NumJellyEstimator:
 
     ## Instantiating the class initializes some variables.
@@ -31,6 +32,7 @@ class NumJellyEstimator:
             "Error: fraction of land set must be a float."
 
         # Check that the value is between zero and one.
+        # if not, there is an error.
         if ((frac <= 0.0) or (frac >= 1.0)):
             print "\nError: Fraction of land used for sugar must be between"\
                   +" 0.0 and 1.0.\n"
@@ -53,6 +55,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    # /param frac fraction of people who love pink (between 0 and 1)
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
