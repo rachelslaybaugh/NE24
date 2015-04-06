@@ -12,8 +12,8 @@ class GridSet(object):
     """GridSet class: holds each grid, reads data, smooths, prolongs, and restricts"""
     def __init__(self, G, H, phi, q, Tname, Sname):
     # Read in Cross section data. Put the data, initial guess, and source on the finest
-    # grid. Initilize the remiander of the grids by inserting the restricted cross
-    # sections and zeros for phi and q.
+    # grid. Initialize the remainder of the grids by inserting the restricted cross
+    # sections and zeros for phi and q respectively.
 
         # Get initial data and make initial guess: 
         # total cross sections
@@ -49,7 +49,7 @@ class GridSet(object):
                  self.restrictMat(self.grids[level].S), init_guess, init_guess)
 
 
-    # this prints data of interest
+    ## this prints data of interest
     def prnt_data(self,level):
 	    """prnt_data: prints the value of phi for a given level"""
 	    print self.grids[level].phi
