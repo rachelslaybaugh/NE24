@@ -45,8 +45,12 @@ class NumJellyEstimator:
     def set_world_pop(self, people):
 
         # NE24: Add a test for type here
+	def test_type():
+		assert isinstance(people, int)
  
         # NE24: Add a test for value here
+	def test_value():
+		assert_equal(people, 7000000000)
 
         # Store the fraction.
         self.worldPop = people
@@ -56,8 +60,12 @@ class NumJellyEstimator:
     def set_frac_ppl_loving_pink(self, frac):
 
         # NE24: Add a test for type here
+	def test_type1():
+		assert isinstance(frac, float)
 
         # NE24: Add a test for value here
+	def test_value1():
+		assert_equal(frac, 0.27)
 
         # Store the fraction.
         self.fracPplLovingPink = frac
@@ -94,7 +102,14 @@ class NumJellyEstimator:
                   +"computing estimate.\n"
 
         # NE24: What other checks might be useful? What is a better way to do this?
+	Check that all of the variables have been set. It would be better to run 
+	tests in earlier parts of the code to ensure that these variables have 
+	already been set.
+
+	#try/except block
+	try:
+	n != 0
+	except:
+	log.error('n is not a valid value')
 
         return int(n)
-
-
