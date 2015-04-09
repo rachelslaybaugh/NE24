@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usAr/bin/python
 
 # import any needed modules
 import pdb
@@ -10,6 +10,12 @@ import sys
 
 class GridSet(object):
     """GridSet class: holds each grid, reads data, smooths, prolongs, and restricts"""
+    # \param G each grid's width and height
+    # \param H the number grids in the grid set
+    # \param phi the phi moment of grids
+    # \param q the q moment of grids
+    # \param Tname a grid of data's filename 
+    # \param Sname a grid of data's filename
     def __init__(self, G, H, phi, q, Tname, Sname):
     # Read in Cross section data. Put the data, initial guess, and source on the finest
     # grid. Initilize the remiander of the grids by inserting the restricted cross
@@ -158,7 +164,7 @@ class GridSet(object):
 	    num_coarse = indx_coarse + 1
         data_out = np.zeros(num_coarse)
         
-        # behavior of last entry based on even or odd gridpoints
+        # correct the behavior of last entry, because it is based on the parity of the maximum index
 	    if indx_fine%2 == 0: # odd number of points
 	        data_out[indx_coarse] = data[indx_fine]
         else:              # even number of points
