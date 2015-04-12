@@ -45,9 +45,13 @@ class NumJellyEstimator:
     def set_world_pop(self, people):
 
         # NE24: Add a test for type here
- 
+        try:
+         int(set_world_pop)
+        except ValueError:
+            print " Value must be an integer"
         # NE24: Add a test for value here
-
+        if ((people <= 0) or (people>=9000000000)):
+            print "\nError: People must be between 0 and 9 billion\n"
         # Store the fraction.
         self.worldPop = people
 
@@ -56,9 +60,13 @@ class NumJellyEstimator:
     def set_frac_ppl_loving_pink(self, frac):
 
         # NE24: Add a test for type here
-
+        assert type(set_frac_ppl_loving_pink) is float, \
+            "Error: fraction must be a float"
         # NE24: Add a test for value here
-
+        if ((frac <= 0.0) or (frac >= 1.0)):
+            print "\nError: Fraction of people loving pink must be between"\
+                +" 0.0 and 1.0.\n"
+            sys.exit()
         # Store the fraction.
         self.fracPplLovingPink = frac
 
@@ -94,7 +102,7 @@ class NumJellyEstimator:
                   +"computing estimate.\n"
 
         # NE24: What other checks might be useful? What is a better way to do this?
-
+        # Another useful check for the code would be if the fraction of people loving pink was larger than one. Try/except blocks will work better for this.
         return int(n)
 
 
