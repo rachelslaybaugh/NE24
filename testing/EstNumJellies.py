@@ -49,7 +49,7 @@ class NumJellyEstimator:
             "Error: world population must be an integer."
         # NE24: Add a test for value here
         try:
-            people<=0.0
+            people>=0.0
         except:
             print "World population must be greater than or equal to 0"    
         # Store the fraction.
