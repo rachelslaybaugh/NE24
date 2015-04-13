@@ -34,7 +34,7 @@ class NumJellyEstimator:
         if ((frac <= 0.0) or (frac >= 1.0)):
             print "\nError: Fraction of land used for sugar must be between"\
                   +" 0.0 and 1.0.\n"
-            sys.exit()
+            raise ValueError
 
         # Store the fraction.
         self.fracLand4Sugar = frac
@@ -45,8 +45,10 @@ class NumJellyEstimator:
     def set_world_pop(self, people):
 
         # NE24: Add a test for type here
- 
+        assert type(people) is int, "Error: number of people on earth must be an int."
+
         # NE24: Add a test for value here
+        assert people >= 0, "Error: can't be negative number of people."
 
         # Store the fraction.
         self.worldPop = people
@@ -56,8 +58,12 @@ class NumJellyEstimator:
     def set_frac_ppl_loving_pink(self, frac):
 
         # NE24: Add a test for type here
+        assert type(frac) is float, \
+            "Error: fraction of land set must be a float."
 
         # NE24: Add a test for value here
+        if ((frac <= 0.0) or (frac >= 1.0)):
+            print "\nError: Fraction of people who love the color pink must be between D0.0 and 1.0.\n"
 
         # Store the fraction.
         self.fracPplLovingPink = frac
