@@ -45,8 +45,16 @@ class NumJellyEstimator:
     def set_world_pop(self, people):
 
         # NE24: Add a test for type here
+        assert type(people) is int, \
+            "Error: number of people set must be an integer."
  
         # NE24: Add a test for value here
+        # I will cap the population at 20 billion
+        if ((people <= 0) or (frac >= 20,000,000,000)):
+            print "\nError: Number of people on Earth must be between"\
+                +"0 and 20 billion.\n"
+            sys.exit()
+        
 
         # Store the fraction.
         self.worldPop = people
@@ -56,9 +64,20 @@ class NumJellyEstimator:
     def set_frac_ppl_loving_pink(self, frac):
 
         # NE24: Add a test for type here
+        assert type(frac) is float, \
+            "Error: fraction of land set must be a float."
+            
+        # Checking to make sure the fraction isn't zero?
+        try:
+            x = 1/frac
+            except ZeroDivisionError:
+                print "frac cannot be zero"
 
         # NE24: Add a test for value here
-
+        if ((frac <= 0.0) or (frac >= 1.0)):
+            print "\nError: Fraction of people who love pink must be between"\
+                +" 0.0 and 1.0.\n"
+            sys.exit()
         # Store the fraction.
         self.fracPplLovingPink = frac
 
@@ -94,7 +113,15 @@ class NumJellyEstimator:
                   +"computing estimate.\n"
 
         # NE24: What other checks might be useful? What is a better way to do this?
-
+        # We might want to check if the final int(n) is an integer. 
+        # If it isn't, it should be rounded to one. This can be checked with the assert type(n) code. 
+        # I would think that's all the checks we need. We need all the values to be the right type and range.
+        
+        # I'm not sure what a better way would be to run this code. It also doesn't do anything useful...
+        # I'm not entirely sure what self is. Is it an array? A class? It doesn't seem all that necessary.
+        # We could just create separate variables for all the calculations.
+        
+        
         return int(n)
 
 
