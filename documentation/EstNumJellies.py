@@ -45,8 +45,13 @@ class NumJellyEstimator:
     def set_world_pop(self, people):
 
         # THW: Add a test for type here
+        assert type(people) is int, \
+            "Error: number of people must be an integer."
  
         # THW: Add a test for value here. Make sure people > 0
+        if (people <= 0):
+            print "\nError: Number of people must be greater than zero.\n"
+            sys.exit()
 
         # Store the fraction.
         self.worldPop = people
@@ -57,8 +62,14 @@ class NumJellyEstimator:
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
+        assert type(frac) is float, \
+            "Error: fraction of people who love pink must be a float."
 
         # THW: Add a test for value here
+        if ((frac <= 0.0) or (frac >= 1.0)):
+            print "\nError: Fraction of people who love pink must be between"\
+                  +" 0.0 and 1.0.\n"
+            sys.exit()
 
         # Store the fraction.
         self.fracPplLovingPink = frac
@@ -87,8 +98,13 @@ class NumJellyEstimator:
     def compute_Njelly_pink_est(self):
         # THW: Check if fracPplLovingPink is 1.0, to avoid zeroDivisionError.
         
-        n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
-            (1.0 - self.fracPplLovingPink)
+        try:
+            n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
+                (1.0 - self.fracPplLovingPink)
+        except ZeroDivisionError:
+            print "Number of jelly beans is undefined when the fraction of people loving pink is 1."
+            sys.exit()
+
         # If this value is zero, it means that some value didn't get set.
         if (n == 0.0):
             print "\nError: fraction of land for sugar, world population, and"\
