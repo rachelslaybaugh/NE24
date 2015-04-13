@@ -73,6 +73,12 @@ class NumJellyEstimator:
         # Store the fraction.
         self.fracPplLovingPink = frac
 
+    try:
+        set_frac_ppl_loving_pink(3)
+    except AssertionError as error:
+        print "Due to an assertion error, the fraction was arbitrarily set to the value of 0.5"
+        set_frac_ppl_loving_pink(0.5)
+
 
     ## Return the scaling constant so the user can check it if they want.
     def get_scaling_const(self):
@@ -105,6 +111,10 @@ class NumJellyEstimator:
                   +"computing estimate.\n"
 
         # NE24: What other checks might be useful? What is a better way to do this?
+        """We might want to add a check to make sure that n isn't negative, in the chance that
+        the scaling constant was accidentally set as a negative number.
+        I would define a new exception for the case that n = 0.0, then I could raise that exception
+        in both compute_Njelly_est and compute_Njelly_pink_est and this would get rid of some redundancy."""
 
         return int(n)
 
