@@ -1,0 +1,4 @@
+Name: Inan Husain
+Homework #7
+User guide: http://pandas.pydata.org/pandas-docs/version/0.15.2/pandas.pdf
+The guide is really useful because it gives details on how pandas has changed over different versions and makes it really easy to find what you need with its table of contents. It'll defintely be helpful in figuring out how different functions work with pandas for my project.
