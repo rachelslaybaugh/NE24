@@ -53,6 +53,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac fraction of people who love the color pink
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
