@@ -1,0 +1,8 @@
+Priyam Das
+Documentation (#7)
+
+
+This is the user guide to the Beamer class for LaTeX.
+http://texdoc.net/texmf-dist/doc/latex/beamer/doc/beameruserguide.pdf
+
+I thought this was a comprehensive guide, though there is a disclaimer at the beginning saying that one should have a working knowledge of LaTeX before reading this guide. Persuing the table of contents, I got a sense that this guide would contain advice for literally anything I would want to accomplish with Beamer. I liked how there was even a short section on how to use the User Guide itself, pointing the reader to certain sections to start at depending on their background level.
