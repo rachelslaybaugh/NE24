@@ -1,0 +1,7 @@
+Daniel	Weitekamp
+Documentation(#7)
+http://docs.pointclouds.org/trunk/group__registration.html
+This documentation is kind of a mess. It is not very human readable since it gives the names of things in namespace form (::) instead of having simpler names for classes in addition to the namespace form for those classes.
+Its kind of redundant to have pcl::registration:: infront of ever class.
+In addition the structure defined at the bottom of the page is somewhat cryptic.
+I could not use any of this code without copious examples.
