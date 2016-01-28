@@ -1,0 +1,4 @@
+- Shadman Rahman
+- Assignment #7
+- https://bitcoin.org/en/developer-guide
+- For the most part, I think that this guide is very useful since it details out how its bookkeeping system stays in order with its block chain.
