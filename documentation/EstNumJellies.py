@@ -12,13 +12,13 @@ class NumJellyEstimator:
     ## Instantiating the class initializes some variables.
     def __init__(self):
 
-        ## Fraction of land used for growing sugar
+        ## Fraction/ratio of land used for growing sugar / total land in the world
         self.fracLand4Sugar = 0.0
         ## World population
         self.worldPop = 0
         ## Scaling constant used in estimate
         self.scalingConst = 1e-1
-        ## Fraction of people who love the color pink.
+        ## Fraction/ratio of people who love the color pink / total population
         self.fracPplLovingPink = 0.0
 
 
@@ -45,19 +45,29 @@ class NumJellyEstimator:
     def set_world_pop(self, people):
 
         # THW: Add a test for type here
+        assert type(people) is int, "Error: world population must be an integer."
  
         # THW: Add a test for value here
+        if (people < 0):
+            print "Error: there cannot be negative number of people on earth."
+            sys.exit()
 
         # Store the fraction.
         self.worldPop = people
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac fraction/ratio of people who love the color pink to total number of people on earth
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
+        assert type(frac) is float, "Error: fraction of people who love the color pink must be a float."
 
         # THW: Add a test for value here
+        if ((frac <= 0.0) or (frac >= 1.0)):
+            print "\nError: Fraction of people who love the color pink must be between"\
+                  +" 0.0 and 1.0.\n"
+            sys.exit()
 
         # Store the fraction.
         self.fracPplLovingPink = frac
@@ -84,10 +94,13 @@ class NumJellyEstimator:
 
     ## Estimate the number of jelly beans in the world using the new pink data.
     def compute_Njelly_pink_est(self):
+        try:
+            n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
+                (1.0 - self.fracPplLovingPink)
+            # If this value is zero, it means that some value didn't get set.
+        except ZeroDivisionError:
+            print "You've attempted to divide by zero! Did you input the fraction of people who love the color pink as 1.0?"
 
-        n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
-            (1.0 - self.fracPplLovingPink)
-        # If this value is zero, it means that some value didn't get set.
         if (n == 0.0):
             print "\nError: fraction of land for sugar, world population, and"\
                   +"fraction of people loving pink must be set before "\
