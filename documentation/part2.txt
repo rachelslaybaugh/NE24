@@ -1,0 +1,8 @@
+Maxwell Tucker
+HW #7: Documentation
+
+http://xaos.sourceforge.net/doc-trunk/
+
+This is the user manual for XaoS, which is the fractal generation software that I am contributing to for the project.
+The documentation is clear and well written, and was generated using Sphinx, an auto-documentation generator for python, similar to doxygen. However, te documentation provides much more than just API descriptions, and fully covers usage and support for the software.
+

@@ -45,9 +45,11 @@ class NumJellyEstimator:
     def set_world_pop(self, people):
 
         # NE24: Add a test for type here
- 
+        assert type(people) is int,
+            "Error: people must be an int"
         # NE24: Add a test for value here
-
+        assert people > 0,
+            "Error: number of people must be positive"
         # Store the fraction.
         self.worldPop = people
 
@@ -56,9 +58,11 @@ class NumJellyEstimator:
     def set_frac_ppl_loving_pink(self, frac):
 
         # NE24: Add a test for type here
-
+        assert type(frac) is float,
+            "Error: frac must be float"
         # NE24: Add a test for value here
-
+        assert frac > 0,
+            "Error: frac must be greater than 0"
         # Store the fraction.
         self.fracPplLovingPink = frac
 
@@ -84,17 +88,20 @@ class NumJellyEstimator:
 
     ## Estimate the number of jelly beans in the world using the new pink data.
     def compute_Njelly_pink_est(self):
+    
+        try:
+            n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
+                (1.0 - self.fracPplLovingPink)
+            # If this value is zero, it means that some value didn't get set.
+            if (n == 0.0):
+                print "\nError: fraction of land for sugar, world population, and"\
+                      +"fraction of people loving pink must be set before "\
+                      +"computing estimate.\n"
 
-        n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
-            (1.0 - self.fracPplLovingPink)
-        # If this value is zero, it means that some value didn't get set.
-        if (n == 0.0):
-            print "\nError: fraction of land for sugar, world population, and"\
-                  +"fraction of people loving pink must be set before "\
-                  +"computing estimate.\n"
+            # NE24: What other checks might be useful? What is a better way to do this?
 
-        # NE24: What other checks might be useful? What is a better way to do this?
-
-        return int(n)
+            return int(n)
+        except:
+            print("Fraction of people loving pink cannot be 0")
 
 
