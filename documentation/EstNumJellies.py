@@ -16,7 +16,7 @@ class NumJellyEstimator:
         self.fracLand4Sugar = 0.0
         ## World population
         self.worldPop = 0
-        ## Scaling constant used in estimate
+        ## Scaling constant used in estimate. Since constant can not be changed, we could make it a class variable insted of an instance variable.
         self.scalingConst = 1e-1
         ## Fraction of people who love the color pink.
         self.fracPplLovingPink = 0.0
@@ -30,7 +30,7 @@ class NumJellyEstimator:
         assert type(frac) is float, \
             "Error: fraction of land set must be a float."
 
-        # Check that the value is between zero and one.
+        # Check that the value is between zero and one, exit program if not.
         if ((frac <= 0.0) or (frac >= 1.0)):
             print "\nError: Fraction of land used for sugar must be between"\
                   +" 0.0 and 1.0.\n"
@@ -45,19 +45,31 @@ class NumJellyEstimator:
     def set_world_pop(self, people):
 
         # THW: Add a test for type here
+        assert type(people) is int, \
+            "Error: number of people must be an integer."
  
-        # THW: Add a test for value here
+        # THW: Add a test for value here. Make sure people > 0
+        if (people <= 0):
+            print "\nError: Number of people must be greater than zero.\n"
+            sys.exit()
 
         # Store the fraction.
         self.worldPop = people
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac fraction of people who love pink (float between 0 and 1)
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
+        assert type(frac) is float, \
+            "Error: fraction of people who love pink must be a float."
 
         # THW: Add a test for value here
+        if ((frac <= 0.0) or (frac >= 1.0)):
+            print "\nError: Fraction of people who love pink must be between"\
+                  +" 0.0 and 1.0.\n"
+            sys.exit()
 
         # Store the fraction.
         self.fracPplLovingPink = frac
@@ -84,9 +96,15 @@ class NumJellyEstimator:
 
     ## Estimate the number of jelly beans in the world using the new pink data.
     def compute_Njelly_pink_est(self):
+        # THW: Check if fracPplLovingPink is 1.0, to avoid zeroDivisionError.
+        
+        try:
+            n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
+                (1.0 - self.fracPplLovingPink)
+        except ZeroDivisionError:
+            print "Number of jelly beans is undefined when the fraction of people loving pink is 1."
+            sys.exit()
 
-        n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
-            (1.0 - self.fracPplLovingPink)
         # If this value is zero, it means that some value didn't get set.
         if (n == 0.0):
             print "\nError: fraction of land for sugar, world population, and"\

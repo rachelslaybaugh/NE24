@@ -1,0 +1,12 @@
+Nick Meier
+Assignment 7
+
+
+I use the Unity Documentation and Scripting API frequently on personal projects.
+		Documentation - http://docs.unity3d.com/Manual/index.html
+		Scripting API - http://docs.unity3d.com/ScriptReference/index.html
+	The Unity Documentation is by far my favorite that I have used. It has a documentation section that describes a lot of their API classes and gives uses without getting into specifics. It also has a Scriipting API that goes above and beyond by giving every method its own page describing its use and containing examples. ex: http://docs.unity3d.com/ScriptReference/Physics.Raycast.html
+
+I also use the Java Documentation frequently
+		http://docs.oracle.com/javase/7/docs/api/overview-summary.html
+	The Java documentation is useful to look up methods, but lacks depth.
