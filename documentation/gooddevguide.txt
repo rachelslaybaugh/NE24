@@ -1,0 +1,5 @@
+Peter Cuellar Assignment #7
+http://matplotlib.org/users/index.html
+This is a great developer's guide because it has efficiently and clearly
+ divided up the required knowledge to use the project. The guide also offers 
+plenty of examples.  

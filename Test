@@ -1,0 +1,48 @@
+Last login: Thu Apr 23 19:41:07 on ttys000
+airbears2-10-142-131-97:~ petercuellar$ cd NE24
+airbears2-10-142-131-97:NE24 petercuellar$ ls
+Makefile	build		make.bat	source
+NE24		git		pyne
+airbears2-10-142-131-97:NE24 petercuellar$ cd NE2
+-bash: cd: NE2: No such file or directory
+airbears2-10-142-131-97:NE24 petercuellar$ cd NE24
+airbears2-10-142-131-97:NE24 petercuellar$ ls
+G		LaTeX		intro		syllabus.tex
+LICENSE		documentation	project.md	testing
+airbears2-10-142-131-97:NE24 petercuellar$ emacs G
+
+
+
+
+
+
+
+
+
+
+
+
+New Developer's Guide
+=====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-uu-:**-F1  G              All L2     (Fundamental)-----------------------------
+Auto-saving...done
