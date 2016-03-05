@@ -2,15 +2,16 @@
 
 The final project for this course consist of several items:
 
-*  an [abstract](#abstract) with a propsal for your project, due March 30, 2015;
-*  the [project](#project) itself, due May 1, 2015; and
-*  a [presentation](#presentation) about the project, given in class on April 27, 2015.
+*  an [abstract](#abstract) with a proposal for your project, due March 21, 2016;
+*  the [project](#project) itself, due April 29, 2016; and
+*  a [presentation](#presentation) about the project, given in class on April
+  25, 2016.
 
 -----------
 ### Project
-Due 2015/05/01 
+Due 2016/04/29 
 
-The final project for this class is to submit a pull request to an open source coding project.
+The final project for this class is to submit a pull request (or equivalent) to an open source coding project.
 The project should be in some way related to computational science.
 The project can be in any language that you want.
 It can be hosted on GitHub or BitBucket (which is easy), or anywhere that you can contribute and provide documentation about your contribution. 
@@ -20,7 +21,7 @@ This can be any of:
 * adding new functionality,
 * adding or improving testing,
 * adding or improving documentation,
-* adding or improving exampels, or
+* adding or improving examples, or
 * something else you feel the project would benefit from.
 
 This should allow you to tailor the project to your personal level of skill, while still pushing yourself to grow.
@@ -40,9 +41,9 @@ You can also often contact someone from the development team to see if they have
 
 -----------
 ### Abstract
-Due 2015/03/30
+Due 2016/05/21
 
-Submit an abstract on bCourses that is one page or less (unless you are in a group, in which case it can be longer) discussing what you will do for your project. This should include:
+Submit an abstract on bCourses or via email that is one page or less (unless you are in a group, in which case it can be longer) discussing what you will do for your project. This should include:
 
 1. The project to which you would like to contribute.
 2. An outline of what you intend to do. 
@@ -54,7 +55,7 @@ Include specifically the objective you are trying to accomplish and why that wil
 
 -----------
 ### Presentation
-Due 2015/04/27
+Due 2016/04/25
 
 We will do in-class presentations on the last day of class. 
 The presentation length will depend upon how many groups we get, but for now plan on five minutes. 
