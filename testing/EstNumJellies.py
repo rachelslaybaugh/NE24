@@ -72,7 +72,7 @@ class NumJellyEstimator:
     ## Estimate the number of jelly beans in the world.
     # This is based on a previous understanding of the estimate that did not
     # take the color pink into account. Still supported for legacy reasons.
-    def compute_Njelly_est(self):
+    def compute_Njelly_est_nopink(self):
 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst
         # If this value is zero, it means that some value didn't get set.
@@ -83,7 +83,7 @@ class NumJellyEstimator:
 
 
     ## Estimate the number of jelly beans in the world using the new pink data.
-    def compute_Njelly_pink_est(self):
+    def compute_Njelly_est(self):
 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
             (1.0 - self.fracPplLovingPink)
