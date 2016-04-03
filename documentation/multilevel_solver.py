@@ -43,16 +43,16 @@ class GridSet(object):
         # Now go on to initialize the remainder of the grids with restricted cross sections, 
         # initial guess for "phi", and a holder for q (to be computed in residual).
         for level in range(H):
-	        init_guess = self.restrict(np.zeros(np.size(self.grids[level].T, 0)))
+	    init_guess = self.restrict(np.zeros(np.size(self.grids[level].T, 0)))
 
-	        self.grids[level+1] = Grid(self.restrictMat(self.grids[level].T), \
-                 self.restrictMat(self.grids[level].S), init_guess, init_guess)
+	    self.grids[level+1] = Grid(self.restrictMat(self.grids[level].T), \
+            self.restrictMat(self.grids[level].S), init_guess, init_guess)
 
 
     # this prints data of interest
     def prnt_data(self,level):
-	    """prnt_data: prints the value of phi for a given level"""
-	    print self.grids[level].phi
+        """prnt_data: prints the value of phi for a given level"""
+	print self.grids[level].phi
 
 
     # Functions used in the multigrid solve

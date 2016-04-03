@@ -3,8 +3,7 @@
 
 **Derived from material by Anthony Scopatz**
 
-Just like version control (which we've covered) and 
-testing (which we're doing next), 
+Just like version control and testing, 
 documenting your code is the __most important thing__ you can do as a software developer. 
 Good documentation is a sublime experience that should permeate your code.
 
@@ -198,12 +197,15 @@ compiled languages, and [sphinx](http://sphinx.pocoo.org/) for Python.
 
 
 
-**Example:** Let's try to make some documentation using Doxygen and the example file `multilevel_solver.py`.
+**Example:** Let's try to make some documentation using Doxygen and the example
+file
+[`multilevel_solver.py`](https://github.com/rachelslaybaugh/NE24/blob/master/documentation/multilevel_solver.py).
 
 ## Exercise
 
 You can build the Doxygen documentation by making a stub Doxygen file for your python code. 
-(Note: we will also use the JellyBeanCode this in a future class, so store it somewhere you can find again).
+We're going to do this for the
+[`JellyBeanCode`](https://github.com/rachelslaybaugh/NE24/blob/master/documentation/EstNumJellies.py)
 
      doxygen -g doc_example
 
