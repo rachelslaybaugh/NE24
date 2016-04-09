@@ -10,6 +10,7 @@ import sys
 class NumJellyEstimator:
 
     ## Instantiating the class initializes some variables.
+    # Sets fraction of land used for sugar, world population, scaling constant, and fraction of people loving pink to default values.
     def __init__(self):
 
         ## Fraction of land used for growing sugar
@@ -53,6 +54,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac fraction people who love pink (between 0 and 1)
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
@@ -82,7 +84,7 @@ class NumJellyEstimator:
         return int(n)
 
 
-    ## Estimate the number of jelly beans in the world using the new pink data.
+    ## Estimate the number of jelly beans in the world, accounting for the inverse relationship between the fraction of people who love pink and the number of jellybeans.
     def compute_Njelly_pink_est(self):
 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
