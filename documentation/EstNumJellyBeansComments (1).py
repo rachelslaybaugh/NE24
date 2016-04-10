@@ -1,4 +1,4 @@
-#!/home/Install/anaconda/bin/python
+#!/c/Users/bob/Anaconda3/python
 
 import sys
 
@@ -44,28 +44,36 @@ class NumJellyEstimator:
     # \param people integer number of people on earth
     def set_world_pop(self, people):
 
-        # THW: Add a test for type here
+        assert type(people) is int
+            "Error: Only entire people may exist, so far at least"
  
-        # THW: Add a test for value here
+        if people > 7000000000:
+            raise Exception ("There are not that many people in the world")
+            
+        
 
-        # Store the fraction.
+        # Store the number of people.
         self.worldPop = people
 
 
     ## Set the fraction of people who love the color pink.
-    # \param frac float number of people who love pink, less than one
+    # \param frac float less than one
     def set_frac_ppl_loving_pink(self, frac):
 
-        # THW: Add a test for type here
+        # Fraciton, in this case, means a decimal verison of percentage.
+        assert type(frac) is float  
+            "Error: You broke math. Please correct it"
 
-        # THW: Add a test for value here
+        # In all honesty, it cant be greater than 1.0, but hey, this is fun.
+        if frac > 0.75:
+            raise exception ("I dont think that's true. Everyone knows blue is the best color")
 
         # Store the fraction.
         self.fracPplLovingPink = frac
 
 
     ## Return the scaling constant so the user can check it if they want.
-    # This value was defined in the __init__ function.
+    # The scaling constant was set in the __init__ fuction at the begining
     def get_scaling_const(self):
 
         return self.scalingConst
@@ -74,7 +82,7 @@ class NumJellyEstimator:
     ## Estimate the number of jelly beans in the world.
     # This is based on a previous understanding of the estimate that did not
     # take the color pink into account. Still supported for legacy reasons.
-    def compute_Njelly_est(self):
+    def compute_Njelly_est_nopink(self):
 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst
         # If this value is zero, it means that some value didn't get set.
@@ -85,7 +93,7 @@ class NumJellyEstimator:
 
 
     ## Estimate the number of jelly beans in the world using the new pink data.
-    def compute_Njelly_pink_est(self):
+    def compute_Njelly_est(self):
 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
             (1.0 - self.fracPplLovingPink)
@@ -95,7 +103,6 @@ class NumJellyEstimator:
                   +"fraction of people loving pink must be set before "\
                   +"computing estimate.\n"
 
-        # THW: What other checks might be useful? What is a better way to do this?
 
         return int(n)
 
