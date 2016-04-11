@@ -7,6 +7,9 @@ import sys
 # The number of jelly beans in the world is correlated to the fraction
 # of land used for sugar, the world population, and the fraction of 
 # people who like the color pink.
+# For beginners: The code in this file defines the class and the variables and functions in it. You can then import
+# this class in order to set the variable values and use the Jelly Estimator functions.
+
 class NumJellyEstimator:
 
     ## Instantiating the class initializes some variables.
@@ -22,7 +25,7 @@ class NumJellyEstimator:
         self.fracPplLovingPink = 0.0
 
 
-    ## Set the fraction of land used for sugar.
+    ## We define the function for setting the fraction of land used for sugar.
     # \param frac fraction of land used for sugar (float between 0 and 1)
     def set_land_frac_for_sugar(self, frac):
 
@@ -40,7 +43,7 @@ class NumJellyEstimator:
         self.fracLand4Sugar = frac
 
 
-    ## Set the world population
+    ## We define the function for setting the world population.
     # \param people integer number of people on earth
     def set_world_pop(self, people):
 
@@ -52,7 +55,8 @@ class NumJellyEstimator:
         self.worldPop = people
 
 
-    ## Set the fraction of people who love the color pink.
+    ## We define the function for setting the fraction of people who love the color pink.
+	# \param frac fraction of people who love pink (float between 0 and 1)
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
@@ -63,7 +67,7 @@ class NumJellyEstimator:
         self.fracPplLovingPink = frac
 
 
-    ## Return the scaling constant so the user can check it if they want.
+    ## Return the scaling constant so the user can check it using the function defined, if they want.
     def get_scaling_const(self):
 
         return self.scalingConst
