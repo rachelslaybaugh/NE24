@@ -2,14 +2,14 @@
 
 import sys
 
-## This class estimates the number of jelly beans in the world using input data
+"""## This class estimates the number of jelly beans in the world using input data
 # determined to be correlated to this result.
 # The number of jelly beans in the world is correlated to the fraction
 # of land used for sugar, the world population, and the fraction of 
-# people who like the color pink.
+# people who like the color pink."""
 class NumJellyEstimator:
 
-    ## Instantiating the class initializes some variables.
+    """## Instantiating the class initializes some variables."""
     def __init__(self):
 
         ## Fraction of land used for growing sugar
@@ -22,11 +22,11 @@ class NumJellyEstimator:
         self.fracPplLovingPink = 0.0
 
 
-    ## Set the fraction of land used for sugar.
-    # \param frac fraction of land used for sugar (float between 0 and 1)
+    """## Set the fraction of land used for sugar.
+    # \param frac fraction of land used for sugar (float between 0 and 1)"""
     def set_land_frac_for_sugar(self, frac):
 
-        # Make sure we've got a float.
+        """# Make sure the class is a float."""
         assert type(frac) is float, \
             "Error: fraction of land set must be a float."
 
@@ -53,6 +53,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    """# \param frac float fraction of people who love the color pink"""
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
