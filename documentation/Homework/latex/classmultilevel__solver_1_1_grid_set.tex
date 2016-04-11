@@ -1,0 +1,181 @@
+\section{multilevel\+\_\+solver.\+Grid\+Set Class Reference}
+\label{classmultilevel__solver_1_1_grid_set}\index{multilevel\+\_\+solver.\+Grid\+Set@{multilevel\+\_\+solver.\+Grid\+Set}}
+Inheritance diagram for multilevel\+\_\+solver.\+Grid\+Set\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmultilevel__solver_1_1_grid_set}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, G, H, {\bf phi}, q, Tname, Sname)\label{classmultilevel__solver_1_1_grid_set_ac67e7da7d78fd54e3a857877fc773244}
+
+\item 
+def {\bf prnt\+\_\+data} (self, level)
+\item 
+def {\bfseries relax} (self, nu, omega, level)\label{classmultilevel__solver_1_1_grid_set_a8421870f0278c6412b7894ecd9f1f25b}
+
+\item 
+def {\bf prolong} (self, data, level)
+\item 
+def {\bfseries restrict\+Mat} (self, data)\label{classmultilevel__solver_1_1_grid_set_af6c66f05d5e7e874b6e1b00a4958b1eb}
+
+\item 
+def {\bfseries restrict} (self, data)\label{classmultilevel__solver_1_1_grid_set_a0680fd0c22a8b46eed0f3d8de7af5488}
+
+\item 
+def {\bfseries residual} (self, level)\label{classmultilevel__solver_1_1_grid_set_a22f0050c0f960551869b255b2397f7a4}
+
+\item 
+def {\bfseries correct} (self, level)\label{classmultilevel__solver_1_1_grid_set_a5ed53041596e0d9185b14d0e3af1b2c9}
+
+\item 
+def {\bfseries direct} (self, level)\label{classmultilevel__solver_1_1_grid_set_a9c8925fc58196c7944cb068030dbd908}
+
+\item 
+def {\bfseries test\+\_\+convergence} (self, tol)\label{classmultilevel__solver_1_1_grid_set_ab90a9e459b5dcfbf9d2c3b8826e5e318}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf T} = np.\+zeros((G,G))
+\item 
+{\bfseries f} = open(Tname)\label{classmultilevel__solver_1_1_grid_set_a9b73b228e2dc3f229c46af67a8a210dc}
+
+\item 
+{\bfseries vals} = line.\+split()\label{classmultilevel__solver_1_1_grid_set_a772b384e433061bfbd1162b28aff7df4}
+
+\item 
+{\bfseries S} = np.\+zeros((G,G))\label{classmultilevel__solver_1_1_grid_set_a690ddac10746e324d51532fd07824319}
+
+\item 
+{\bfseries grids}\label{classmultilevel__solver_1_1_grid_set_a8a8cdecf798636c0bed2f0ad88f45527}
+
+\item 
+{\bfseries dtype}\label{classmultilevel__solver_1_1_grid_set_a1d55c1f48f205b92d1dea1b98b9183ef}
+
+\item 
+{\bfseries previous}\label{classmultilevel__solver_1_1_grid_set_ac2d3ae067871ce53d1808883982556e0}
+
+\item 
+{\bfseries init\+\_\+guess} = self.\+restrict(np.\+zeros(np.\+size(self.\+grids[level].{\bf T}, 0)))\label{classmultilevel__solver_1_1_grid_set_ae100d604c98077a706e062a9eb862809}
+
+\item 
+{\bfseries q} = self.\+grids[level].q\label{classmultilevel__solver_1_1_grid_set_afc3ace0ff6ed59d36d919f415409b0ac}
+
+\item 
+{\bfseries phi\+\_\+new} = copy.\+deepcopy(self.\+grids[level].{\bf phi})\label{classmultilevel__solver_1_1_grid_set_a9e069017c1cc277efe37814eef9b6ddf}
+
+\item 
+{\bfseries phi\+\_\+old} = copy.\+deepcopy(phi\+\_\+new)\label{classmultilevel__solver_1_1_grid_set_a6f5be1f719a27eecefc53ebd92201bb1}
+
+\item 
+int {\bfseries down} = 0\label{classmultilevel__solver_1_1_grid_set_a863767ce4b23e220555f25661f7fc0e0}
+
+\item 
+int {\bfseries up} = 0\label{classmultilevel__solver_1_1_grid_set_ad4617f2f8b0cbfe4f5af010fb18349f3}
+
+\item 
+{\bfseries down} = down+S[g, gp]$\ast$phi\+\_\+new[gp]\label{classmultilevel__solver_1_1_grid_set_ae1d95791d2c5e09e2b7f0f49698d695e}
+
+\item 
+{\bfseries up} = up+S[g, gp]$\ast$phi\+\_\+old[gp]\label{classmultilevel__solver_1_1_grid_set_a24c95a1ccdcf7527c1c9fc6af4eba572}
+
+\item 
+tuple {\bfseries D} = ({\bf T}[g, g] -\/ S[g, g])\label{classmultilevel__solver_1_1_grid_set_a343466da52e736f54da84240f7aa1d00}
+
+\item 
+{\bf phi}
+\item 
+{\bf num\+\_\+fine} = np.\+size(data,0)
+\item 
+int {\bfseries indx\+\_\+fine} = {\bf num\+\_\+fine}-\/1\label{classmultilevel__solver_1_1_grid_set_a0d14400f3187938c13fc4dc7e69bdc11}
+
+\item 
+{\bfseries indx\+\_\+coarse} = int(math.\+floor(indx\+\_\+fine/2))\label{classmultilevel__solver_1_1_grid_set_ac9130429945c3c362ed5f6b3486fd2d1}
+
+\item 
+int {\bfseries num\+\_\+coarse} = indx\+\_\+coarse+1\label{classmultilevel__solver_1_1_grid_set_a85786972d0474377aa1ec653457089b8}
+
+\item 
+{\bfseries data\+\_\+tmp} = np.\+zeros((num\+\_\+coarse, {\bf num\+\_\+fine}))\label{classmultilevel__solver_1_1_grid_set_ab8efbb954bd7e454df96d96ea4a62cb9}
+
+\item 
+{\bfseries data\+\_\+out} = np.\+zeros((num\+\_\+coarse, num\+\_\+coarse))\label{classmultilevel__solver_1_1_grid_set_a5cf175528e47b612c09baece04e354a4}
+
+\item 
+{\bf lhs} = np.\+dot((self.\+grids[level].{\bf T} -\/ self.\+grids[level].S), self.\+grids[level].{\bf phi})
+\item 
+{\bfseries r} = self.\+grids[level].q-\/{\bf lhs}\label{classmultilevel__solver_1_1_grid_set_ae0623319fb298cfa66f715bf4fd72f58}
+
+\item 
+{\bf correction} = self.\+prolong(self.\+grids[level].{\bf phi}, level)
+\item 
+{\bfseries corrected\+\_\+phi} = self.\+grids[level-\/1].{\bf phi}+{\bf correction}\label{classmultilevel__solver_1_1_grid_set_ae3a2829850e71626fa08b32f534eff1f}
+
+\item 
+{\bf error} = np.\+linalg.\+norm(self.\+previous -\/ self.\+grids[0].{\bf phi})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}GridSet class: holds each grid, reads data, smooths, prolongs, and restricts\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}!prnt\+\_\+data@{prnt\+\_\+data}}
+\index{prnt\+\_\+data@{prnt\+\_\+data}!multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}}
+\subsubsection[{prnt\+\_\+data(self, level)}]{\setlength{\rightskip}{0pt plus 5cm}def multilevel\+\_\+solver.\+Grid\+Set.\+prnt\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{level}
+\end{DoxyParamCaption}
+)}\label{classmultilevel__solver_1_1_grid_set_a2a35157a9be88e8a81f1a0bc61fcc523}
+\begin{DoxyVerb}prnt_data: prints the value of phi for a given level\end{DoxyVerb}
+ \index{multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}!prolong@{prolong}}
+\index{prolong@{prolong}!multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}}
+\subsubsection[{prolong(self, data, level)}]{\setlength{\rightskip}{0pt plus 5cm}def multilevel\+\_\+solver.\+Grid\+Set.\+prolong (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{data, }
+\item[{}]{level}
+\end{DoxyParamCaption}
+)}\label{classmultilevel__solver_1_1_grid_set_a18c6c8b9b5bf4cdb36f51c5166b59ddf}
+\begin{DoxyVerb}prolong: interpolates a vector from coarse to fine grids\end{DoxyVerb}
+ 
+
+\subsection{Member Data Documentation}
+\index{multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}!correction@{correction}}
+\index{correction@{correction}!multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}}
+\subsubsection[{correction}]{\setlength{\rightskip}{0pt plus 5cm}multilevel\+\_\+solver.\+Grid\+Set.\+correction = self.\+prolong(self.\+grids[level].{\bf phi}, level)\hspace{0.3cm}{\ttfamily [static]}}\label{classmultilevel__solver_1_1_grid_set_aae1405c5f4ea1b3d0a28f2bbbb1461fb}
+\begin{DoxyVerb}correct: corrects and updates the solution on the previous level\end{DoxyVerb}
+ \index{multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}!error@{error}}
+\index{error@{error}!multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}multilevel\+\_\+solver.\+Grid\+Set.\+error = np.\+linalg.\+norm(self.\+previous -\/ self.\+grids[0].{\bf phi})\hspace{0.3cm}{\ttfamily [static]}}\label{classmultilevel__solver_1_1_grid_set_adf738b523c2cf33c3768c69040c380ef}
+\begin{DoxyVerb}test_convergence: test if the system has converged\end{DoxyVerb}
+ \index{multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}!lhs@{lhs}}
+\index{lhs@{lhs}!multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}}
+\subsubsection[{lhs}]{\setlength{\rightskip}{0pt plus 5cm}multilevel\+\_\+solver.\+Grid\+Set.\+lhs = np.\+dot((self.\+grids[level].{\bf T} -\/ self.\+grids[level].S), self.\+grids[level].{\bf phi})\hspace{0.3cm}{\ttfamily [static]}}\label{classmultilevel__solver_1_1_grid_set_aec4b52672b82fd48fb63078f6b05ed02}
+\begin{DoxyVerb}residual: puts the residual into the next level source vector\end{DoxyVerb}
+ \index{multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}!num\+\_\+fine@{num\+\_\+fine}}
+\index{num\+\_\+fine@{num\+\_\+fine}!multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}}
+\subsubsection[{num\+\_\+fine}]{\setlength{\rightskip}{0pt plus 5cm}multilevel\+\_\+solver.\+Grid\+Set.\+num\+\_\+fine = np.\+size(data,0)\hspace{0.3cm}{\ttfamily [static]}}\label{classmultilevel__solver_1_1_grid_set_aab6805fdddd81cb0bff39c74a1db5ebd}
+\begin{DoxyVerb}restrictMat: restricts a matrix from fine to coarse grids\end{DoxyVerb}
+
+
+\begin{DoxyVerb}restrict: restricts a vector from fine to coarse grids\end{DoxyVerb}
+ \index{multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}!phi@{phi}}
+\index{phi@{phi}!multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}}
+\subsubsection[{phi}]{\setlength{\rightskip}{0pt plus 5cm}multilevel\+\_\+solver.\+Grid\+Set.\+phi\hspace{0.3cm}{\ttfamily [static]}}\label{classmultilevel__solver_1_1_grid_set_a89f4924177047261d47c0a17403fb4f7}
+\begin{DoxyVerb}direct: directly solves the problem on the coarsest grid\end{DoxyVerb}
+ \index{multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}!T@{T}}
+\index{T@{T}!multilevel\+\_\+solver\+::\+Grid\+Set@{multilevel\+\_\+solver\+::\+Grid\+Set}}
+\subsubsection[{T}]{\setlength{\rightskip}{0pt plus 5cm}multilevel\+\_\+solver.\+Grid\+Set.\+T = np.\+zeros((G,G))\hspace{0.3cm}{\ttfamily [static]}}\label{classmultilevel__solver_1_1_grid_set_aa463b40444b917ad445277651a853295}
+\begin{DoxyVerb}relax: apply the iteration method\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+multilevel\+\_\+solver.\+py\end{DoxyCompactItemize}

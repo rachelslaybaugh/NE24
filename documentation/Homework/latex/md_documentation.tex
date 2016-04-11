@@ -1,0 +1,222 @@
+{\bfseries Derived from material by Anthony Scopatz}
+
+Just like version control and testing, documenting your code is the {\bfseries most important thing} you can do as a software developer. Good documentation is a sublime experience that should permeate your code.
+
+Documentation is important because it is {\tt the only way that 90\% of people will ever interact with you or your code}. In fact, it is the only way that scales up; there are only so many emails that you can (and want) write.
+
+What is disturbing is that documentation is a forgotten after thought for most developers. It turns out that being able to write software {\itshape and} being able to write in your primary spoken language are {\itshape different skills}. Luckily, we are academics so it is in our nature to publish / write. We have no excuse for bad documentation.
+
+\subsection*{The Many Stages of Documentation}
+
+
+\begin{DoxyEnumerate}
+\item Code Comments
+\item A\+PI Documentation
+\item Auto-\/\+Documentation
+\item Self-\/\+Documenting Code
+\item Readmes
+\item User Guides
+\item Developer Guides
+\end{DoxyEnumerate}
+
+\subsection*{Code Comments}
+
+Every language has a special character (or two) that indicate(s) to the parser, compiler, or interpreter that whatever comes after or between these characters should be ignored. This allows the author to write, annotate, and explain the code that they are writing {\itshape right at the point that they are writing it!} This is especially helpful if something weird, obtuse, or obscure is about to happen because it gives the author a chance to explain themselves to future developers (often themselves in 1, 2, 6, etc. months).
+
+The best part is that you can put literally {\itshape anything} in comments\+: publication citations, A\+S\+C\+II art, messages to your friends, and threats to your collaborators.
+
+In Python, the comment character is the hash symbol {\ttfamily \#}. The following example shows how you might help explain a toaster\+:
+
+\begin{DoxyVerb}def toast(slices, toastiness, msg=None):
+
+    # make sure the toaster has the right setting
+    toastiness = int(toastiness) if 0 < toastiness else 5
+
+    print "Engage the bread warming!"
+    for slice in slices:
+        slice.toast(toastiness)
+
+    # log the message, making a default if needed
+    if msg is None:
+        msg = "Toasted to level {}".format(toastiness)
+    logging.info(msg)
+\end{DoxyVerb}
+
+
+However, it is certainly possible to over-\/document your code with comments. Comments should never simply repeat what the code itself is doing. The goal is to strike the right balance. The appropriate ratio changes with language. (Typically higher level languages have greater functionality per line and so have more comments per amount of code.) Try to avoid the following\+:
+
+\begin{DoxyVerb}# init a to 0
+a = 0
+
+# make b 'a string'
+b = 'a string'
+
+# Add one to a
+a = a + 1
+
+# stopping excessive comments
+self.fall_on_sword()
+\end{DoxyVerb}
+
+
+Note\+: my personal tendency is to over-\/comment. It doesn\textquotesingle{}t necessarily hurt anything, but what might some detractors be?
+
+\subsection*{A\+PI Documentation}
+
+The application programming interface (A\+PI) is the definition of the protocol that two pieces of code may use to interact with one another. Consider the case of functions. All functions have a function signature that specifies how many arguments they accept and their return values. This signature, along with the module name and function name, is the A\+PI. (The function object/pointer itself is the implementation and is independent of the abstract A\+PI.)
+
+Just because you have an argument list, however, does not imply that the meaning of the arguments is known. For example\+:
+
+\begin{DoxyVerb}def f(a, b=10):
+
+    # ...
+    return
+\end{DoxyVerb}
+
+
+We know that {\ttfamily f()} accepts two argument {\ttfamily a} and {\ttfamily b} and that {\ttfamily b} should probably be an integer. But what does {\ttfamily f()} actually do? What do these arguments mean in this context?
+
+Python allows the user to define A\+PI documentation right at the function, class, module, or variable definition. Every Python object may have a {\ttfamily \+\_\+\+\_\+doc\+\_\+\+\_\+} attribute that is a string representation of the A\+PI docs. This is known as a {\itshape docstring}. {\tt P\+E\+P257} describes the conventions for docstrings. The most important of these is that simple things should have simple docstrings.
+
+If, right below a definition, in the first non-\/comment, non-\/whitespace line, there is an unassigned string literal, then this string is automatically loaded as the docstring. It is this docstring that is then read by the {\ttfamily help()} built-\/in or the {\ttfamily ?} in i\+Python.
+
+\begin{DoxyVerb}def mean(numlist):
+    """Computes the mean of a list of numbers."""
+
+    try:
+        total = sum(numlist)
+        length = len(numlist)
+    except ValueError:
+        print "The number list was not a list of numbers."
+    except:
+        print "There was a problem evaluating the number list."
+    return total/length
+
+
+def fib(n):
+    """Determines the nth Fibonacci number, where n is 
+    a non-negative integer."""
+
+    if n < 0 or int(n) != n:
+        return NotImplemented
+    elif n == 0 or n == 1:
+        return n
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+print help(mean)
+print fib.__doc__
+\end{DoxyVerb}
+
+
+Most Python docstrings are written in a markup language called {\tt re\+Structured\+Text} (r\+ST). It is designed to be easy to read, extensible, and provide enough natural-\/looking syntax to be able to render nicely. For example, our toaster docstring might look like\+:
+
+\begin{DoxyVerb}def toast(slices, toastiness, msg=None):
+    """Toast some bread.
+
+    Parameters
+    ----------
+    slices : sequence of instance of bread slices
+        Toast slices to toastiness level
+    toastiness : int
+        The desired toaster setting
+    msg : str, optional
+        A message for the toaster's usage log.
+
+    """
+
+    # make sure the toaster has the right setting
+    toastiness = int(toastiness) if 0 < toastiness else 5
+
+    print "Engage the bread warming!"
+    for slice if slices:
+        slice.toast(toastiness)
+
+    # log the message, making a default if needed
+    if msg is None:
+        msg = "Toasted to level {}".format(toastiness)
+    logging.info(msg)
+\end{DoxyVerb}
+
+
+\subsection*{Auto-\/\+Documentation}
+
+Automatic documentation is the powerful concept that the comments and docstrings that the developer has already written can be scraped from the code base and placed on a website or into A\+PI documentation. This significantly reduces the overhead of having to write and maintain many documents that contain effectively the same information.
+
+Probably the three most popular auto-\/doc projects are {\tt javadoc} for Java, {\tt Doxygen} for most compiled languages, and {\tt sphinx} for Python.
+
+{\bfseries Example\+:} Let\textquotesingle{}s try to make some documentation using Doxygen and the example file {\tt {\ttfamily multilevel\+\_\+solver.\+py}}.
+
+\subsection*{Exercise}
+
+You can build the Doxygen documentation by making a stub Doxygen file for your python code. We\textquotesingle{}re going to do this for the {\tt {\ttfamily Jelly\+Bean\+Code}} \begin{DoxyVerb} doxygen -g doc_example
+\end{DoxyVerb}
+
+
+Now you have a Doxygen template called doc\+\_\+example. Open the doc\+\_\+example file. There are many entries you can edit. The ones we\textquotesingle{}re going to worry about here\+:
+
+1) Let\textquotesingle{}s change the project name \begin{DoxyVerb} PROJECT_NAME           = "Jelly Bean Code"
+\end{DoxyVerb}
+
+
+2) Tell Doxygen what files to use \begin{DoxyVerb} INPUT                  =  "EstNumJellies.py"
+\end{DoxyVerb}
+
+
+3) Tell it to optimize for Python \begin{DoxyVerb} OPTIMIZE_OUTPUT_JAVA   = YES
+\end{DoxyVerb}
+
+
+Information about formatting Doxygen comments for Python can be found {\tt here}.
+
+Let\textquotesingle{}s build what we\textquotesingle{}ve got now and check it out \begin{DoxyVerb} doxygen doc_example
+ cd html
+ google-chrome index.html
+\end{DoxyVerb}
+
+
+Add some additional Doxygen formatted comments to the functions in the {\ttfamily Est\+Num\+Jellies.\+py} module. Then, using Doxygen, generate a website that auto-\/documents this module.
+
+Feel free to peruse the multilevel\+\_\+solver.\+py code for a more complicated example.
+
+\subsection*{Self-\/\+Documenting Code}
+
+Much like in testing where you can simply write perfect code the first time, there is an analogous philosophy is documentation. This is the philosophy of {\tt self-\/documenting code}. This ethos makes the claim that it is often possible to write code in such a way that new readers can understand what the code does simply by reading it. Therefore, no extra documentation is required. It is all there in the code itself.
+
+While there are obvious pitfalls with this approach (assumed knowledge on the reader\textquotesingle{}s behalf, unavoidable complexities, etc.) there are some merits. By having meaningful naming conventions and structure it does become possible to infer a lot about a code just by glancing at it. Coding standards come from the same desire to have readable software.
+
+However, using this documentation strategy exclusively is {\itshape highly} inadvisable.
+
+\subsection*{Readmes}
+
+The omnipresent {\ttfamily R\+E\+A\+D\+ME} file is typically a plain text file that sits next to the code. They may contain markup, but are often quite terse. point of a readme file is to provide only the most basic information to the user / developer.
+
+Readme files are so common that Git\+Hub will render and display the readme file for all directories whenever you are browsing a source tree. Even Linux itself has a {\tt readme}\+:
+
+\begin{quote}
+Linux kernel release 3.\+x {\tt http\+://kernel.\+org/}
+
+These are the release notes for Linux version 3. Read them carefully, as they tell you what this is all about, explain how to install the kernel, and what to do if something goes wrong.
+
+W\+H\+AT IS L\+I\+N\+UX?
+
+Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-\/knit team of hackers across the Net. It aims towards P\+O\+S\+IX and Single U\+N\+IX Specification compliance.
+
+It has all the features you would expect in a modern fully-\/fledged Unix, including true multitasking, virtual memory, shared libraries, demand loading, shared copy-\/on-\/write executables, proper memory management, and multistack networking including I\+Pv4 and I\+Pv6.
+
+It is distributed under the G\+NU General Public License -\/ see the accompanying C\+O\+P\+Y\+I\+NG file for more details.
+
+... \end{quote}
+
+
+\subsection*{User Guides}
+
+The next level of documentation are user guides. These often take the form of books or pdfs that aim to explain top level architecture and functionality to (possibly novice) users. Such documents are extremely helpful for bringing in new users, helping existing users learn more complex features, going in depth into the theory (math, biology, physics, chemistry, engineering), and as a reference manual for advanced users and developers. However, because of their high level nature, you typically have to wait until the code has stabilized to be able to write a good, comprehensive user\textquotesingle{}s guide.
+
+{\bfseries Examples\+:} {\tt F\+L\+A\+SH}, {\tt Num\+Py}.
+
+\subsection*{Developer Guides}
+
+Developer guides are very similar to user guides, except that they assume a basic mastery of the project. They are typically for people who want to {\itshape become} developers on a project rather than for existing developers. They are probably most important for code projects that have plugin architectures and/or where the line between user and developer is less well defined.
+
+{\bfseries Examples\+:} {\tt Android}, {\tt Python}. 
