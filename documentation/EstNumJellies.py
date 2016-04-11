@@ -30,7 +30,7 @@ class NumJellyEstimator:
         assert type(frac) is float, \
             "Error: fraction of land set must be a float."
 
-        # Check that the value is between zero and one.
+        # Check that the value is between zero and one and report an error if the value is not between 0 and 1.
         if ((frac <= 0.0) or (frac >= 1.0)):
             print "\nError: Fraction of land used for sugar must be between"\
                   +" 0.0 and 1.0.\n"
@@ -44,7 +44,9 @@ class NumJellyEstimator:
     # \param people integer number of people on earth
     def set_world_pop(self, people):
 
-        # THW: Add a test for type here
+        # Make sure that the amount of people is less than 7.125 billions and that it is an integer.
+        assert type(people) is int
+        assert people <= 7125000000
  
         # THW: Add a test for value here
 
