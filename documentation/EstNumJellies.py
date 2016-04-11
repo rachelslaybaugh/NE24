@@ -63,11 +63,11 @@ class NumJellyEstimator:
 
 	# Ensure that number of people whole love pink is a float
          assert type(frac) is float, \
-            "Error: world population must be a float."
+            "Error: fraction of people who love pink must be a float."
 
         # Check that the value is greater than 0 but less than 1
         if ((frac <= 0.0) or (frac >= 1.0)):
-            print "\nError: World population must be between"\
+            print "\nError: fraction of people who love pink must be between"\
                   +" 0.0 and 1.0.\n"
             sys.exit()
 
