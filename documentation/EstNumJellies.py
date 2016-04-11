@@ -53,6 +53,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac fraction of the people who love pink
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
@@ -63,7 +64,7 @@ class NumJellyEstimator:
         self.fracPplLovingPink = frac
 
 
-    ## Return the scaling constant so the user can check it if they want.
+    ## Return the scaling constant so the user can check it if they want to.
     def get_scaling_const(self):
 
         return self.scalingConst
