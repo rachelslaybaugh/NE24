@@ -96,13 +96,15 @@ class NumJellyEstimator:
 
     ## Estimate the number of jelly beans in the world using the new pink data.
     def compute_Njelly_pink_est(self):
+	"""Jelly Beans final equation.
 
 	Parameters
 	_________
-	-self.fracLand4Sugar: fraction of land used for sugar 
-	-self.worldPop: world population
-	-self.scalingConst: fraction of people
+	self.fracLand4Sugar : fraction of land used for sugar 
+	self.worldPop : world population
+	self.scalingConst : fraction of people
 
+	"""
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
             (1.0 - self.fracPplLovingPink)
         # If this value is zero, it means that some value didn't get set.
