@@ -44,20 +44,32 @@ class NumJellyEstimator:
     # \param people integer number of people on earth
     def set_world_pop(self, people):
 
-        # THW: Add a test for type here
- 
-        # THW: Add a test for value here
-
-        # Store the fraction.
+        # Ensure that the world population is a float
+	 assert type(people) is float, \
+            "Error: world population must be a float." 
+        
+	# Check that the value is greater than 0 but less than 10 billion
+	if ((people <= 0.0) or (people >= 10000000000)):
+            print "\nError: World population must be between"\
+                  +" 0.0 and 10 billion .\n"
+            sys.exit()
+        
+	# Store the fraction.
         self.worldPop = people
 
 
     ## Set the fraction of people who love the color pink.
     def set_frac_ppl_loving_pink(self, frac):
 
-        # THW: Add a test for type here
+	# Ensure that number of people whole love pink is a float
+         assert type(frac) is float, \
+            "Error: world population must be a float."
 
-        # THW: Add a test for value here
+        # Check that the value is greater than 0 but less than 1
+        if ((frac <= 0.0) or (frac >= 1.0)):
+            print "\nError: World population must be between"\
+                  +" 0.0 and 1.0.\n"
+            sys.exit()
 
         # Store the fraction.
         self.fracPplLovingPink = frac
@@ -84,6 +96,12 @@ class NumJellyEstimator:
 
     ## Estimate the number of jelly beans in the world using the new pink data.
     def compute_Njelly_pink_est(self):
+
+	Parameters
+	_________
+	-self.fracLand4Sugar: fraction of land used for sugar 
+	-self.worldPop: world population
+	-self.scalingConst: fraction of people
 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
             (1.0 - self.fracPplLovingPink)
