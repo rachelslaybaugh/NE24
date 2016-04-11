@@ -6,7 +6,12 @@ import sys
 # determined to be correlated to this result.
 # The number of jelly beans in the world is correlated to the fraction
 # of land used for sugar, the world population, and the fraction of 
-# people who like the color pink.
+# people who love the color pink.
+#This code is not to be used in any circumstance involving real life, or money.
+#Do not bet your life on this code, jelly beans are not the answer to everything.
+#For the future, perhaps scale this code down to guessing the number of jelly beans
+#in a jar of volume, 'V'. That way, future generations will be able to win every Easter
+#guessing game that will ever be thrown at them.
 class NumJellyEstimator:
 
     ## Instantiating the class initializes some variables.
@@ -36,7 +41,7 @@ class NumJellyEstimator:
                   +" 0.0 and 1.0.\n"
             sys.exit()
 
-        # Store the fraction.
+        # Store the fraction.z
         self.fracLand4Sugar = frac
 
 
@@ -44,9 +49,12 @@ class NumJellyEstimator:
     # \param people integer number of people on earth
     def set_world_pop(self, people):
 
-        # THW: Add a test for type here
- 
-        # THW: Add a test for value here
+        # THW: Make sure world population is an integer
+        assert type(people) is integer
+            "Error: You cannot have a fraction of a person."
+        # THW: The population has to be positive as well.
+        if (people < 0):
+            "Error: The population must be positive."
 
         # Store the fraction.
         self.worldPop = people
@@ -55,9 +63,20 @@ class NumJellyEstimator:
     ## Set the fraction of people who love the color pink.
     def set_frac_ppl_loving_pink(self, frac):
 
-        # THW: Add a test for type here
+        # THW: Make sure that frac is a fraction
+        inNumber = frac
+        inNumberint = int(inNumber)
+        if inNumber == inNumberint:
+            print "this number is an int"
+        else:
+            "Error: You must have a fracion"
 
-        # THW: Add a test for value here
+        # THW:Check that the value is between zero and one.
+        if ((frac <= 0.0) or (frac >= 1.0)):
+            print "\nError: Fraction of land used for sugar must be between"\
+                  +" 0.0 and 1.0.\n"
+            sys.exit()
+
 
         # Store the fraction.
         self.fracPplLovingPink = frac
