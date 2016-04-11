@@ -26,7 +26,8 @@ class NumJellyEstimator:
     # \param frac fraction of land used for sugar (float between 0 and 1)
     def set_land_frac_for_sugar(self, frac):
 
-        # Make sure we've got a float.  Not an ice cream float, mind you. 
+        # Make sure we've got a float.  Not an ice cream float, mind you. << 
+	#This is the comment I added to. :-)
         assert type(frac) is float, \
             "Error: fraction of land set must be a float."
 
@@ -53,6 +54,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    #\param positive fraction of people loving pink (float between 0 and 1)
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
@@ -72,7 +74,6 @@ class NumJellyEstimator:
     ## Estimate the number of jelly beans in the world.
     # This is based on a previous understanding of the estimate that did not
     # take the color pink into account. Still supported for legacy reasons.
-\param frac fraction of land used for sugar (float between 0 and 1)
     def compute_Njelly_est(self):
 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst
