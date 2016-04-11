@@ -44,20 +44,13 @@ class NumJellyEstimator:
     # \param people integer number of people on earth
     def set_world_pop(self, people):
 
-        # THW: Add a test for type here
- 
-        # THW: Add a test for value here
-
         # Store the fraction.
         self.worldPop = people
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac float fraction of people on earth who love the color pink
     def set_frac_ppl_loving_pink(self, frac):
-
-        # THW: Add a test for type here
-
-        # THW: Add a test for value here
 
         # Store the fraction.
         self.fracPplLovingPink = frac
@@ -83,6 +76,7 @@ class NumJellyEstimator:
 
 
     ## Estimate the number of jelly beans in the world using the new pink data.
+    # This estimate is premised off of the notion that the number of jelly beans in the world is inversely proportional to 1 minus the fraction of people who love the color pink.
     def compute_Njelly_pink_est(self):
 
         n = self.fracLand4Sugar * self.worldPop * self.scalingConst / \
@@ -93,7 +87,6 @@ class NumJellyEstimator:
                   +"fraction of people loving pink must be set before "\
                   +"computing estimate.\n"
 
-        # THW: What other checks might be useful? What is a better way to do this?
 
         return int(n)
 
