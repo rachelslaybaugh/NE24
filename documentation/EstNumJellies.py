@@ -7,6 +7,7 @@ import sys
 # The number of jelly beans in the world is correlated to the fraction
 # of land used for sugar, the world population, and the fraction of 
 # people who like the color pink.
+#In reality, it is also correlated with the number of people loving blue. But, for simplicity, we neglect this factor.
 class NumJellyEstimator:
 
     ## Instantiating the class initializes some variables.
@@ -53,6 +54,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac fraction of people who love pink. Not to be confused with fraction of land used for sugar
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
