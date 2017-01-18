@@ -2,15 +2,15 @@
 
 The final project for this course consist of several items:
 
-*  an [abstract](#abstract) with a proposal for your project, due between March
- 21 and 28, 2016;
-*  the [project](#project) itself, due April 29, 2016; and
+*  an [abstract](#abstract) with a proposal for your project, due March
+ 20, 2017;
+*  the [project](#project) itself, due April 28, 2017; and
 *  a [presentation](#presentation) about the project, given in class on April
-  25, 2016.
+  24, 2017.
 
 -----------
 ### Project
-Due 2016/04/29 
+Due 2017/04/28 
 
 The final project for this class is to submit a pull request (or equivalent) to an open source coding project.
 The project should be in some way related to computational science.
@@ -42,7 +42,7 @@ You can also often contact someone from the development team to see if they have
 
 -----------
 ### Abstract
-Due 2016/05/21 through 2016/05/28
+Due 2017/03/20 
 
 Submit an abstract on bCourses or via email that is one page or less (unless you are in a group, in which case it can be longer) discussing what you will do for your project. This should include:
 
@@ -56,7 +56,7 @@ Include specifically the objective you are trying to accomplish and why that wil
 
 -----------
 ### Presentation
-Due 2016/04/25
+Due 2017/04/24
 
 We will do in-class presentations on the last day of class. 
 The presentation length will depend upon how many groups we get, but for now plan on five minutes. 
