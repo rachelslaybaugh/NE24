@@ -11,9 +11,11 @@ to get set up for hands-on exercises.
 
 * 1/23, Introduction: http://rachelslaybaugh.github.io/NE24/intro/#/ 
 
-* 1/30, Shell: https://github.com/rachelslaybaugh/shell-novice, https://swcarpentry.github.io/shell-novice/  
+* 1/30, Shell: https://github.com/rachelslaybaugh/shell-novice,
+  http://bids.github.io/2016-01-14-berkeley/shell
 
-* 2/6 and 2/13, Git: https://github.com/rachelslaybaugh/git-novice, https://swcarpentry.github.io/git-novice/ 
+* 2/6 and 2/13, Git: https://github.com/rachelslaybaugh/git-novice,
+  http://bids.github.io/2016-01-14-berkeley/shell
 
 * 2/27, iPython and Jupyter: https://github.com/rachelslaybaugh/ucb-ipython-intro  
 
