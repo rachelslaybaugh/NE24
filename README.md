@@ -15,7 +15,7 @@ to get set up for hands-on exercises.
   http://bids.github.io/2016-01-14-berkeley/shell
 
 * 2/6 and 2/13, Git: https://github.com/rachelslaybaugh/git-novice,
-  http://bids.github.io/2016-01-14-berkeley/shell
+  http://bids.github.io/2016-01-14-berkeley/git/
 
 * 2/27, iPython and Jupyter: https://github.com/rachelslaybaugh/ucb-ipython-intro  
 
