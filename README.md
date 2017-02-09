@@ -19,10 +19,14 @@ to get set up for hands-on exercises.
 
 * 2/27, iPython and Jupyter: https://github.com/rachelslaybaugh/ucb-ipython-intro  
 
-* 3/5, Project assignment: https://github.com/rachelslaybaugh/NE24/blob/gh-pages/project.md  
+* 3/6, Project assignment: https://github.com/rachelslaybaugh/NE24/blob/gh-pages/project.md  
 
 * 3/12 and 3/20, Testing: http://rachelslaybaugh.github.io/python-testing/,  https://github.com/rachelslaybaugh/python-testing 
 
 * 4/3, Documentation: https://github.com/rachelslaybaugh/NE24/blob/gh-pages/documentation/documentation.ipynb 
 
 * 4/10, LaTeX: https://github.com/rachelslaybaugh/LaTeXIntro
+
+* 4/17, Careers in computational science
+
+* 4/24, Final presentations
