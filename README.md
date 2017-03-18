@@ -21,7 +21,7 @@ to get set up for hands-on exercises.
 
 * 3/6, Project assignment: https://github.com/rachelslaybaugh/NE24/blob/gh-pages/project.md  
 
-* 3/12 and 3/20, Testing: http://rachelslaybaugh.github.io/python-testing/,  https://github.com/rachelslaybaugh/python-testing, https://github.com/rachelslaybaugh/JellyBeanCode
+* 3/12 and 3/20, Testing: http://rachelslaybaugh.github.io/python-testing/, https://github.com/rachelslaybaugh/JellyBeanCode
 
 * 4/3, Documentation: https://github.com/rachelslaybaugh/NE24/blob/gh-pages/documentation/documentation.ipynb 
 
