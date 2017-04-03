@@ -54,7 +54,7 @@ If Git is not already available on your machine you can try to install it via yo
 
 # Text Editor
 
-When you're writing code, it's nice to have a text editor that is optimized for writing code, with features like automatic color-coding of key words. The default text editor on Mac OS X and Linux is usually set to Vim, which is not famous for being intuitive. if you accidentally find yourself stuck in it, try typing the escape key, followed by `:q!` (colon, lower-case 'q', exclamation mark), then hitting Return to return to the shell.
+When you're writing code, it's nice to have a text editor that is optimized for writing code, with features like automatic color-coding of key words. The default text editor on Mac OS X and Linux is usually set to Vim, which is not famous for being intuitive. If you accidentally find yourself stuck in it, try typing the escape key, followed by `:q!` (colon, lower-case 'q', exclamation mark), then hitting Return to return to the shell.
 
 ### Windows
 
@@ -108,3 +108,16 @@ Type
 
 and then press tab. The name of the file you just downloaded should appear.
 6. Press enter. You will follow the text-only prompts. When there is a colon at the bottom of the screen press the down arrow to move down through the text. Type yes and press enter to approve the license. Press enter to approve the default location for the files. Type `yes` and press enter to prepend Anaconda to your `PATH` (this makes the Anaconda distribution the default Python).
+
+
+# Doxygen
+
+You can download the appropriate binaries for your operating system [here](https://www.stack.nl/~dimitri/doxygen/download.html). Note that it may be that this only gives you the GUI version.
+
+For a non-GUI version, you can trying following the build from source directions. You can also try using a package manager. For **Mac OS X** I use [homebrew](https://brew.sh/). I think a good one for **Windows** is [Chocolatey](https://chocolatey.org/). 
+
+
+# LaTeX
+
+I think [this](https://latex-project.org/ftp.html) should get you all up and running... You can also try a package manager. For **Mac OS X** I personally use [TexShop](http://pages.uoregon.edu/koch/texshop/)
+
