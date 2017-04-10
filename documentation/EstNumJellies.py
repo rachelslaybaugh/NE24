@@ -9,7 +9,7 @@ import sys
 # people who like the color pink.
 class NumJellyEstimator:
 
-    ## Instantiating the class initializes some variables.
+    ## Initializes some variables.
     def __init__(self):
 
         ## Fraction of land used for growing sugar
@@ -53,6 +53,7 @@ class NumJellyEstimator:
 
 
     ## Set the fraction of people who love the color pink.
+    # \param frac float fraction of people who love pink
     def set_frac_ppl_loving_pink(self, frac):
 
         # THW: Add a test for type here
