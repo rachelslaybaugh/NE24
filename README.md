@@ -3,7 +3,8 @@
 Instructor: Rachel Slaybaugh 
 
 ### Initial Setup
-Please follow the directions [here](https://rawgit.com/rachelslaybaugh/NE24/gh-pages/index.html) 
+Please follow the directions
+[here](https://github.com/rachelslaybaugh/NE24/blob/gh-pages/setup.md) 
 to get set up for hands-on exercises.
 
 ### Schedule for Spring 2017
