@@ -11,7 +11,8 @@ Bash is a commonly-used shell that gives you the power to do simple tasks more q
 
 ### Windows
 
-1. Download the Git for Windows installer.
+1. Download the Git for Windows installer [here]
+(https://git-for-windows.github.io/) to use GitBash.
 2. Run the installer and follow the steps bellow:
    1. Click on "Next".
    2. Click on "Next".
