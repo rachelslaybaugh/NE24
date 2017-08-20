@@ -2,31 +2,37 @@
 ### Spring 2016
 Instructor: Rachel Slaybaugh 
 
+Initially taught Spring 2014; all materials under a Creative Commons Attribution
+[License](./LICENSE)
+
 ### Initial Setup
 Please follow the directions
 [here](https://github.com/rachelslaybaugh/NE24/blob/gh-pages/setup.md) 
 to get set up for hands-on exercises.
 
 ### Schedule for Spring 2017
-* 1/23, Syllabus: http://rachelslaybaugh.github.io/NE24/syllabus.pdf 
+* 1/23, Syllabus:
+* [http://rachelslaybaugh.github.io/NE24/syllabus.pdf](http://rachelslaybaugh.github.io/NE24/syllabus.pdf) 
 
-* 1/23, Introduction: http://rachelslaybaugh.github.io/NE24/intro/#/ 
+* 1/23, Introduction: [http://rachelslaybaugh.github.io/NE24/intro/#/](http://rachelslaybaugh.github.io/NE24/intro/#/)
 
-* 1/30, Shell: https://github.com/rachelslaybaugh/shell-novice,
-  http://bids.github.io/2016-01-14-berkeley/shell
 
-* 2/6 and 2/13, Git: https://github.com/rachelslaybaugh/git-novice,
-  http://bids.github.io/2016-01-14-berkeley/git/
+* 1/30, Shell: [https://github.com/rachelslaybaugh/shell-novice](https://github.com/rachelslaybaugh/shell-novice),
+  [http://bids.github.io/2016-01-14-berkeley/shell](http://bids.github.io/2016-01-14-berkeley/shell)
 
-* 2/27, iPython and Jupyter: https://github.com/rachelslaybaugh/ucb-ipython-intro  
+* 2/6 and 2/13, Git: [https://github.com/rachelslaybaugh/git-novice](https://github.com/rachelslaybaugh/git-novice),
+  [http://bids.github.io/2016-01-14-berkeley/git/](http://bids.github.io/2016-01-14-berkeley/git/)
 
-* 3/6, Project assignment: https://github.com/rachelslaybaugh/NE24/blob/gh-pages/project.md  
+* 2/27, iPython and Jupyter: [https://github.com/rachelslaybaugh/ucb-ipython-intro](https://github.com/rachelslaybaugh/ucb-ipython-intro)
 
-* 3/12 and 3/20, Testing: http://rachelslaybaugh.github.io/python-testing/, https://github.com/rachelslaybaugh/JellyBeanCode
+* 3/6, Project assignment: [https://github.com/rachelslaybaugh/NE24/blob/gh-pages/project.md](https://github.com/rachelslaybaugh/NE24/blob/gh-pages/project.md)  
 
-* 4/3, Documentation: https://github.com/rachelslaybaugh/NE24/blob/gh-pages/documentation/documentation.ipynb 
+* 3/12 and 3/20, Testing: [http://rachelslaybaugh.github.io/python-testing](http://rachelslaybaugh.github.io/python-testing), 
+[https://github.com/rachelslaybaugh/JellyBeanCode](https://github.com/rachelslaybaugh/JellyBeanCode)
 
-* 4/10, LaTeX: https://github.com/rachelslaybaugh/LaTeXIntro
+* 4/3, Documentation: [https://github.com/rachelslaybaugh/NE24/blob/gh-pages/documentation/documentation.ipynb](https://github.com/rachelslaybaugh/NE24/blob/gh-pages/documentation/documentation.ipynb)
+
+* 4/10, LaTeX: [https://github.com/rachelslaybaugh/LaTeXIntro](https://github.com/rachelslaybaugh/LaTeXIntro)
 
 * 4/17, Careers in computational science
 
